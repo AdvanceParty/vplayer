@@ -1,5 +1,6 @@
 import React from 'react';
-import Player from './components/Player';
+import VideoDisplay from './components/VideoDisplay';
+import VideoFilter from './components/VideoFilter/VideoFilter';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,12 +16,17 @@ class App extends React.Component {
   }
 
   currentTrackUrl = () => this.state.playlist[this.state.currentTrackNumber];
+  nextTrack = () => {
+    const i = this.state.currentTrackNumber + 1;
+    const newTrackNum = i >= this.state.playlist.length ? 0 : i;
+    this.setState({ currentTrackNumber: newTrackNum });
+  };
 
   render() {
     return (
-      <div className="App">
-        <Player src={this.currentTrackUrl()} />
-      </div>
+      <VideoFilter filter="grid">
+        <VideoDisplay className="player" src={this.currentTrackUrl()} />
+      </VideoFilter>
     );
   }
 }
