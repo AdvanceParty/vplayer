@@ -1,3 +1,23 @@
+._filter-grid {
+  --pattern: repeating-linear-gradient(
+      0deg,
+      rgba(0, 200, 0, 0.8) 0px,
+      rgba(0, 80, 0, 0.8) 2px,
+      rgba(0, 0, 0, 0) 2px,
+      rgba(0, 0, 0, 0) 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 250, 0, 0.8) 2px,
+      rgba(0, 2500, 0, 0.8) 6px,
+      rgba(0, 0, 0, 0) 6px,
+      rgba(0, 0, 0, 0) 10px
+    );
+  --blend-mode: overlay;
+}
+
+/* --------- Nothing To See Down Here ------- */
+
 .videoFilter {
   position: relative;
   overflow: hidden;
