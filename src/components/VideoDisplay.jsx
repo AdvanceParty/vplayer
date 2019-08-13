@@ -26,8 +26,8 @@ class VideoDisplay extends React.Component {
 }
 
 const defaultEventLogger = (eType, e = undefined) => {
-  const msg = e ? `${eType}\n${JSON.stringify(e)} ` : eType;
-  console.log(msg);
+  // const msg = e ? `${eType}\n${JSON.stringify(e)} ` : eType;
+  // console.log(msg);
 };
 
 VideoDisplay.propTypes = {

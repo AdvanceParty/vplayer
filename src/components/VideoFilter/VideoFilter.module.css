@@ -16,11 +16,27 @@
   --blend-mode: overlay;
 }
 
+._filter-hscan {
+  --pattern: repeating-linear-gradient(
+    0deg,
+    rgba(0, 155, 0, 0) 0px,
+    rgba(0, 155, 0, 0) 2px,
+    rgba(0, 155, 0, 1) 4px,
+    rgba(0, 155, 0, 0) 6px
+  );
+  --blend-mode: overlay;
+}
+
 /* --------- Nothing To See Down Here ------- */
 
 .videoFilter {
   position: relative;
   overflow: hidden;
+}
+
+.videoFilter video {
+  /* position: absolute; */
+  object-fit: cover;
 }
 .videoFilter:last-child::before {
   position: absolute;
