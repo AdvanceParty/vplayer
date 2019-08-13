@@ -11,7 +11,7 @@ class App extends React.Component {
         'http://localhost:3000/vids/matrix.webm',
         'http://localhost:3000/vids/sneakers.webm',
       ],
-      currentTrackNumber: 1,
+      currentTrackNumber: 2,
     };
   }
 

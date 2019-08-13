@@ -27,5 +27,5 @@ html {
 
 .player {
   position: absolute;
-  z-index: 20;
+  /* z-index: 20; */
 }

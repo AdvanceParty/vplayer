@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 import styles from './VideoFilter.module.css';
-// import filters from './filters/VideoFilter-Grid.module.css';
-
-// const filters = {
-//   grid: './filters/VideoFilter-Grid.module.css',
-// };
 
 export class VideoFilter extends Component {
   getFilterClass = filterName => {

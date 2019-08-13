@@ -3,22 +3,8 @@ import ReactPlayer from 'react-player';
 import PropTypes from 'prop-types';
 
 class VideoDisplay extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
-  // onReady = () => this.props.onReady() || console.log('onReady');
-  // onStart = () => this.props.onStart() || console.log('onStart');
-  // onPlay = () => this.props.onPlay() || console.log('onPlay');
-  // onPause = () => this.props.onPause() || console.log('onPause');
-  // onBuffer = () => this.props.onBuffer() || console.log('onBuffer');
-  // onEnded = () => this.props.onEnded() || console.log('onEnded');
-  // onError = () => this.props.onError() || console.log('onError');
-  // onSeek = e => this.props.onSeek(e) || console.log('onSeek');
-  // onProgress = e => this.props.onProgress(e) || console.log('onProgress', e);
-  // onDuration = e => this.props.onDuration(e) || console.log('onDuration', e);
-
   render() {
+    console.log(this.props.playing);
     return (
       <ReactPlayer
         url={this.props.src}
@@ -63,7 +49,7 @@ VideoDisplay.propTypes = {
 VideoDisplay.defaultProps = {
   playing: true,
   height: '100%',
-  width: '100vh',
+  width: '100%',
   onReady: defaultEventLogger('onReady'),
   onStart: defaultEventLogger('onStart'),
   onPlay: defaultEventLogger('onPlay'),
