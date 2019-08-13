@@ -18,8 +18,8 @@ class VideoDisplay extends React.Component {
         onSeek={this.props.onSeek}
         onProgress={this.props.onProgress}
         onDuration={this.props.onDuration}
-        height="100vh"
-        width="100%"
+        width={this.props.width}
+        height={this.props.height}
       />
     );
   }
