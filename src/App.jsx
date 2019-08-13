@@ -24,8 +24,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <VideoFilter filter="hscan">
-        <VideoDisplay className="player" src={this.currentTrackUrl()} width="100%" />
+      <VideoFilter filter="grid">
+        <VideoDisplay src={this.currentTrackUrl()} width="100%" />
       </VideoFilter>
     );
   }

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 class VideoDisplay extends React.Component {
   render() {
-    console.log(this.props.playing);
     return (
       <ReactPlayer
         url={this.props.src}
