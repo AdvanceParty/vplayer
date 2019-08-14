@@ -19,6 +19,7 @@ class VideoDisplay extends React.Component {
         onDuration={this.props.onDuration}
         width={this.props.width}
         height={this.props.height}
+        loop={this.props.loop}
       />
     );
   }
@@ -32,6 +33,7 @@ const defaultEventLogger = (eType, e = undefined) => {
 VideoDisplay.propTypes = {
   src: PropTypes.string.isRequired,
   playing: PropTypes.bool,
+  loop: PropTypes.bool,
   width: PropTypes.string,
   height: PropTypes.string,
   onReady: PropTypes.func,
@@ -47,6 +49,7 @@ VideoDisplay.propTypes = {
 
 VideoDisplay.defaultProps = {
   playing: true,
+  loop: true,
   height: '100%',
   width: '100%',
   onReady: defaultEventLogger('onReady'),

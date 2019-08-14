@@ -11,7 +11,7 @@ class App extends React.Component {
         'http://localhost:3000/vids/matrix.webm',
         'http://localhost:3000/vids/sneakers.webm',
       ],
-      currentTrackNumber: 2,
+      currentTrackNumber: 0,
     };
   }
 
@@ -24,7 +24,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <VideoFilter filter="grid">
+      <VideoFilter filter="grid" strength={0.5}>
         <VideoDisplay src={this.currentTrackUrl()} width="100%" />
       </VideoFilter>
     );
