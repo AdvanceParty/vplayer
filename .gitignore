@@ -11,6 +11,9 @@
 # production
 /build
 
+#big media files for testing
+*.webm
+
 # misc
 .DS_Store
 .env.local
