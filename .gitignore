@@ -12,7 +12,7 @@
 /build
 
 #big media files for testing
-*.webm
+/public/vids/
 
 # misc
 .DS_Store
