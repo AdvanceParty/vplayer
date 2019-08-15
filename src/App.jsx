@@ -1,6 +1,7 @@
 import React from 'react';
 import VideoDisplay from './components/VideoDisplay';
-import VideoFilter from './components/VideoFilter/VideoFilter';
+import VideoEffect from './components/VideoEffect/VideoEffect';
+import CanvasTest from './components/CanvasTest';
 
 class App extends React.Component {
   constructor(props) {
@@ -24,9 +25,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <VideoFilter filter="grid" strength={0.5}>
-        <VideoDisplay src={this.currentTrackUrl()} width="100%" />
-      </VideoFilter>
+      // <VideoEffect effect="grid" strength={0.5}>
+      //   <VideoDisplay src={this.currentTrackUrl()} width="100%" />
+      // </VideoEffect>
+      <CanvasTest />
     );
   }
 }

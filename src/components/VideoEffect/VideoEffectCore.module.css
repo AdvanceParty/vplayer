@@ -1,4 +1,4 @@
-.videoFilter {
+.videoEffect {
   position: relative;
   overflow: hidden;
   --blend-mode: normal;
@@ -8,13 +8,13 @@
 
 /*  CSS Filter effects 
     -- applied directly to video element */
-.videoFilter video {
+.videoEffect video {
   filter: var(--filter);
 }
 
 /*  Gradient and overlay effects
     -- applied to pseudo element over video element */
-.videoFilter :last-child::before {
+.videoEffect :last-child::before {
   position: absolute;
   z-index: 10;
   top: 0;

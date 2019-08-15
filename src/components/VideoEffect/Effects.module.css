@@ -1,4 +1,4 @@
-._filter-grid {
+._effect-grid {
   --col: rgba(255, 255, 255, 0.8);
   --pattern: repeating-linear-gradient(0deg, var(--col) 0px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 6px),
     repeating-linear-gradient(90deg, var(--col) 0px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 6px);
@@ -6,23 +6,23 @@
   --blend-mode: overlay;
 }
 
-._filter-hscan {
+._effect-hscan {
   --col: rgba(255, 255, 255, 0.8);
   --pattern: repeating-linear-gradient(0deg, var(--col) 0px, rgba(0, 0, 0, 1) 1px, rgba(0, 0, 0, 1) 6px);
   --blend-mode: overlay;
 }
 
-._filter-vscan {
+._effect-vscan {
   --col: rgba(255, 255, 255, 0.8);
   --pattern: repeating-linear-gradient(90deg, var(--col) 0px, rgba(0, 0, 0, 1) 1px, rgba(0, 0, 0, 1) 6px);
   --blend-mode: overlay;
 }
 
-._filter-bw {
+._effect-bw {
   --filter: grayscale(var(--strength));
 }
 
-._filter-x {
+._effect-x {
   --filter: grayscale(var(--strength));
 }
 
