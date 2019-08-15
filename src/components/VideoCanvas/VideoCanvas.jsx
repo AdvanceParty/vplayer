@@ -1,34 +1,10 @@
 import React, { Component } from 'react'
-import { relative } from 'path';
+import styles from './Styles.module.css';
 
-export class CanvasTest extends Component {
+export class VideoCanvas extends Component {
 
   constructor (props) {
     super(props)
-
-    this.styles = {
-      wrapper: {
-        position: 'relative',
-        overflow: 'hidden',
-        width: '100%',
-        minHeight: '100vh'
-      },
-      canvas: {
-        position: 'absolute',
-        zIndex: '10',
-        left: '0',
-        top: '0',
-        mixBlendMode: 'overlay'
-      },
-      video: {
-        position: 'absolute',
-        zIndex: '1',
-        width:'100%',
-        top: '0',
-        left:'0'
-      },
-    }
-
     this.state = {
       vRef: React.createRef(),
       cRef: React.createRef(),
@@ -57,6 +33,8 @@ export class CanvasTest extends Component {
     const { video, canvas, context, width, height } = this.state;
     if(video.paused || video.ended) return false;
    
+    // ToDO: Would be better to do this on resize event
+    // Rather than checking each time draw() is called
     const w = video.clientWidth;
     const h = video.clientHeight;
     if (w !== width || h !== height) {
@@ -71,14 +49,14 @@ export class CanvasTest extends Component {
 
   render() {
     return (
-      <div style={this.styles.wrapper}>
-        <canvas ref={this.state.cRef}  style={this.styles.canvas}></canvas>
-        <video ref={this.state.vRef} loop autoPlay controls  style={this.styles.video}>
-          <source src="vids/matrix.webm" type="video/webm" />
+      <div>
+        <canvas ref={this.state.cRef}></canvas>
+        <video ref={this.state.vRef} autoPlay >
+          <source src={this.props.src} type={this.props.type} />
         </video>
       </div>
     )
   }
 }
 
-export default CanvasTest
+export default VideoCanvas
