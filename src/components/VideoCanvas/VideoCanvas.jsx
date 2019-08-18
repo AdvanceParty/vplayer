@@ -3,7 +3,6 @@
 // https://stackoverflow.com/questions/21197707/html5-video-to-canvas-playing-very-slow
 
 import React, { Component } from 'react'
-// import styles from './Styles.module.css';
 
 export class VideoCanvas extends Component {
 
@@ -81,7 +80,9 @@ export class VideoCanvas extends Component {
 
   render() {
     return (
+      <div>
         <canvas style={this.styles} ref={this.state.cRef}></canvas>
+      </div>
     )
   }
 }

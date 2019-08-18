@@ -1,6 +1,6 @@
 import React from 'react';
 // import VideoDisplay from './components/VideoDisplay';
-// import VideoEffect from './components/VideoEffect/VideoEffect';
+import VideoEffect from './components/VideoEffect/VideoEffect';
 import VideoCanvas from './components/VideoCanvas/VideoCanvas';
 
 class App extends React.Component {
@@ -25,12 +25,9 @@ class App extends React.Component {
 
   render() {
     return (
-      // <VideoEffect effect="grid" strength={0.5}>
-        // <VideoDisplay src={this.currentTrackUrl()} width="100%" />
-      // </VideoEffect>
-      <div className='vCan'>
-        <VideoCanvas src="vids/matrix.webm" type="video/webm" filter='grayscale(.8) invert(1)' />
-      </div>
+      <VideoEffect effect="x" strength={0.5}>
+        <VideoCanvas src="vids/matrix.webm" type="video/webm" filter='grayscale(.8) invert(1)' />  
+      </VideoEffect>
     );
   }
 }
