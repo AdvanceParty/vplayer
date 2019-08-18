@@ -28,7 +28,9 @@ class App extends React.Component {
       // <VideoEffect effect="grid" strength={0.5}>
         // <VideoDisplay src={this.currentTrackUrl()} width="100%" />
       // </VideoEffect>
-      <VideoCanvas src="vids/matrix.webm" type="video/webm" filter='grayscale(.8) invert(1)' />
+      <div className='vCan'>
+        <VideoCanvas src="vids/matrix.webm" type="video/webm" filter='grayscale(.8) invert(1)' />
+      </div>
     );
   }
 }

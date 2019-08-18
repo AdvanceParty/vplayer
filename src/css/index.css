@@ -18,3 +18,8 @@ html {
   min-height: 100vh;
   background-color: #fff;
 }
+
+.vCan {
+  width: 100%;
+  height: 100%;
+}
