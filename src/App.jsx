@@ -1,6 +1,8 @@
 import React from 'react';
-// import VideoEffect from './components/VideoEffect/VideoEffect';
-import VideoCanvas from './components/VideoCanvas/VideoCanvas';
+// import VideoCanvas from './components/VideoCanvas/VideoCanvas';
+// import VideoWorker from './components/VideoWorker/VideoWorker';
+import HelloWorker from './canvas.worker.js';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -24,11 +26,34 @@ class App extends React.Component {
 
   render() {
     return (
-      <VideoCanvas src="vids/matrix.webm" type="video/webm" filter='grayscale(.8) invert(1)' />  
+      <div>Yo</div>
+      // <VideoCanvas src="vids/matrix.webm" type="video/webm" filter='grayscale(.8) invert(1)' />  
+      // <VideoWorker src="vids/matrix.webm" type="video/webm" filter='grayscale(.8) invert(1)' />  
       // <VideoEffect effect="x" strength={0.5}>
       // </VideoEffect>
     );
   }
+}
+
+const helloWorker = new Worker(HelloWorker);
+let messageCount = 0;
+
+helloWorker.postMessage({ run: true });
+
+helloWorker.onmessage = event => {
+  if (event.data.status) {
+    console.log('STATUS', event.data.status);
+  }
+
+  if (event.data.message) {
+    messageCount += 1;
+    console.log('MESSAGE', event.data.message);
+
+    if (messageCount >= 5) {
+      helloWorker.postMessage({ run: false });
+    }
+  }
+
 }
 
 export default App;
